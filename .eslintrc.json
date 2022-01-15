@@ -1,3 +1,36 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // detecta automaticamente a versão do react ao analisar o código
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error", // react-hooks valida o uso dos hooks
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off", // não avisar da falta de prop-types, estamos usando TypeScript
+    "react/react-in-jsx-scope": "off", // A partir da versão 17 não precisa importar sempre o react
+    "@typescript-eslint/explicit-module-boundary-types": "off", // não precisa tipar o retorno de uma função quando a tipagem estiver inferida
+    "@typescript-eslint/explicit-function-return-type": "off"
+  }
 }
