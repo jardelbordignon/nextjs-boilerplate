@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# example stories of storybook
+/src/stories/
+
 # production
 /build
 
