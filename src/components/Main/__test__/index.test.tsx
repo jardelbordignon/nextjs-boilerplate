@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import { Main } from '..'
 
 describe('Main', () => {
-  it('deve poder renderizar o heading', () => {
+  it('deve renderizar o heading', () => {
     render(<Main />)
 
     expect(
@@ -15,5 +15,11 @@ describe('Main', () => {
     const { container } = render(<Main />)
 
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('deve renderizar a com a cor de background correta', () => {
+    const { container } = render(<Main />)
+
+    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
   })
 })
