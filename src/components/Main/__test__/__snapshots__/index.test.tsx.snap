@@ -21,6 +21,7 @@ exports[`Main deve renderizar igual ao snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-align: center;
   padding: 0 15px;
 }
 
