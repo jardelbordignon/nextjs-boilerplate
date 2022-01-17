@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import { Main } from '.'
+import { Main } from '..'
 
 type Type = typeof Main
 
