@@ -15,6 +15,10 @@
 # example stories of storybook
 /src/stories/
 
+# pwa generate files
+/public/sw.js
+/public/workbox-*.js
+
 # production
 /build
 
